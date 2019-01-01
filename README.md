@@ -13,3 +13,5 @@ https://github.com/GroceriStar/showcase/blob/master/src/selectors/selector.js
 https://github.com/GroceriStar/react-shopping-list-template
 https://github.com/ChickenKyiv/recipe-box
 https://github.com/ChickenKyiv/recipe-search-react
+
+maybe connect db for some quick cases....
