@@ -19,7 +19,7 @@ console.log( departments );
 //   return groceristar.getAllGrocery();
 // }
 
-function getGroceryDataFromId(id){
+function getGroceryDataFromId2(id){
 
   console.log(getGroceryById(id));
   let grocery     = getGroceryById(id)[0];
@@ -98,7 +98,7 @@ const getGroceryDataFromId = function(app, db) {
   });
 
 };
-// 
+//
 // const getNotes = function(app, db) {
 //
 //   app.get('/notes', (req, res) => {
@@ -137,12 +137,11 @@ const getGroceryDataFromId = function(app, db) {
 
 
 
-module.export {
+module.exports  = {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId,
   getGroceryCollection,
   getAllGrocery,
-
   getNotes
 }
