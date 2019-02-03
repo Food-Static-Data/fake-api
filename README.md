@@ -10,8 +10,14 @@ check mongoadmin: https://github.com/mrvautin/adminMongo
 https://github.com/GroceriStar/showcase/blob/master/src/selectors/selector.js
 
 2. Move methods, that we're using at our other, fetch-related
-https://github.com/GroceriStar/react-shopping-list-template
-https://github.com/ChickenKyiv/recipe-box
-https://github.com/ChickenKyiv/recipe-search-react
+- https://github.com/GroceriStar/react-shopping-list-template
+- https://github.com/ChickenKyiv/recipe-box
+- https://github.com/ChickenKyiv/recipe-search-react
 
 maybe connect db for some quick cases....
+
+https://stackoverflow.com/questions/19696240/proper-way-to-return-json-using-node-or-express
+
+Link to heroku: https://grocerylists-fake-api.herokuapp.com/
+
+Note: after changes at master - it'll be automatically deployed to heroku - if we don't have an errors after building in Travis CI.
