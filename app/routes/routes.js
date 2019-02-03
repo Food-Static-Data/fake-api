@@ -32,13 +32,13 @@ function getGroceryDataFromId2(id){
 }
 
 
-const getNotes = function(app, db) {
+const getRoutes = function(app, db) {
 
   // app.post('/notes', (req, res) => {
   //   res.send('Hello')
   // });
 
-  app.get('/notes', (req, res) => {
+  app.get('/routes', (req, res) => {
     // console.log(req.body)
     res.send('Hello')
   });
@@ -143,5 +143,5 @@ module.exports  = {
   getGroceryDataFromId,
   getGroceryCollection,
   getAllGrocery,
-  getNotes
+  getRoutes
 }
