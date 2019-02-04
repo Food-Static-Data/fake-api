@@ -75,11 +75,8 @@ const getFullGrocery = function(app, db) {
 };
 
 const getGroceryCollection = function(app, db) {
-  app.get('/grocery/collection', (req, res) => {
+  app.get('/grocery-collection', (req, res) => {
     // console.log(req.body)
-
-    const result = groceristar.getGroceryShowcase()
-    console.log(result);
     const result = showcase.getGroceryShowcase()
     res.send(result)
   });
@@ -157,6 +154,6 @@ module.exports  = {
   getAllGrocery,
   getRoutes,
 
-  getDepartmentsClean
+  getDepartmentsClean,
   getGroceriesWithDepIngKey
 }
