@@ -144,7 +144,11 @@ const getGroceriesWithDepIngKey = function(app, db) {
 //
 // };
 
-
+const getStatus = function(app, db) {
+  app.get('/status', (req, res) => {
+      res.status(200).send({ date: new Date() })
+  })
+}
 
 module.exports  = {
   getGroceryById,
@@ -155,5 +159,7 @@ module.exports  = {
   getRoutes,
 
   getDepartmentsClean,
-  getGroceriesWithDepIngKey
+  getGroceriesWithDepIngKey,
+
+  getStatus
 }

@@ -15,6 +15,7 @@
     "express": "^4.16.4",
     "jest": "^24.0.0",
     "mongodb": "^3.1.13",
-    "nodemon": "^1.18.9"
+    "nodemon": "^1.18.9",
+    "supertest": "^3.4.2"
   }
 }
