@@ -1,7 +1,8 @@
 const { groceristar, showcase } = require('@groceristar/groceristar-fetch')
 const departments = groceristar.getDepartments();
-
-console.log( departments );
+// const collection  = groceristar.getGroceryShowcase();
+// console.log()
+// console.log( departments );
 
 // function getGroceryById( id ) {
 //   return groceristar.getGroceryById(id);
@@ -38,12 +39,20 @@ const getRoutes = function(app, db) {
   //   res.send('Hello')
   // });
 
-  app.get('/routes', (req, res) => {
+  app.get('/hello', (req, res) => {
     // console.log(req.body)
     res.send('Hello')
   });
 
 };
+
+const getDepartmentsClean = function(app, db) {
+
+  app.get('/departments/all', (req, res) => {
+    res.send( departments ) // this works only becase send automatically understand that we have an array or object here
+  })
+
+}
 
 //***
 //@TODO doesn't work, return null
@@ -66,8 +75,11 @@ const getFullGrocery = function(app, db) {
 };
 
 const getGroceryCollection = function(app, db) {
-  app.get('/grocery-collection', (req, res) => {
+  app.get('/grocery/collection', (req, res) => {
+    // console.log(req.body)
 
+    const result = groceristar.getGroceryShowcase()
+    console.log(result);
     const result = showcase.getGroceryShowcase()
     res.send(result)
   });
@@ -144,5 +156,7 @@ module.exports  = {
   getGroceryCollection,
   getAllGrocery,
   getRoutes,
+
+  getDepartmentsClean
   getGroceriesWithDepIngKey
 }
