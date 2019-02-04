@@ -59,7 +59,7 @@ const getDepartmentsClean = function(app, db) {
 const getGroceryById = function(app, db) {
   app.get('/grocery/:id/', (req, res) => {
 
-    const result = groceristar.getGroceryById();
+    const result = groceristar.getGroceryById(req.params.id);
     res.send(result)
   });
 
