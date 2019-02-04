@@ -48,18 +48,15 @@ const getRoutes = function(app, db) {
 //***
 //@TODO doesn't work, return null
 const getGroceryById = function(app, db) {
-
   app.get('/grocery/:id/', (req, res) => {
 
     const result = groceristar.getGroceryById();
-    console.log(req.params.id)
     res.send(result)
   });
 
 };
 
 const getFullGrocery = function(app, db) {
-
   app.get('/grocery/name/:name', (req, res) => {
     // console.log(req.body)
     const result = groceristar.getGroceryByNameWithDepAndIng(req.params.name);
@@ -69,22 +66,17 @@ const getFullGrocery = function(app, db) {
 };
 
 const getGroceryCollection = function(app, db) {
-
   app.get('/grocery-collection', (req, res) => {
-    // console.log(req.body)
 
     const result = showcase.getGroceryShowcase()
-    console.log(result)
     res.send(result)
   });
 
 };
 
 const getAllGrocery = function(app, db) {
-
   app.get('/grocery-all', (req, res) => {
-    console.log("Grocery ALL")
-    // groceristar.getAllGrocery();
+
     const result = groceristar.getAllGrocery();
     res.send(result)
   });
@@ -93,8 +85,6 @@ const getAllGrocery = function(app, db) {
 
 const getGroceryDataFromId = function(app, db) {
 app.get('/grocery/data/:id/', (req, res) => {
-    console.log("Request");
-    console.log(req.params.id)
     // res.send('Hello')
     const result = groceristar.getGroceryDataFromId(req.params.id);
     res.send(result)
