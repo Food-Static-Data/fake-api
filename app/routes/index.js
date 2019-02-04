@@ -6,7 +6,7 @@ const { getRoutes,
   getGroceryDataFromId,
   getGroceriesWithDepIngKey,
   getStatus,
-
+  getDepartmentsClean
  } = require('./routes');
 
 
@@ -21,6 +21,6 @@ module.exports = function(app, db) {
   getAllGrocery(app, db)
   getGroceryDataFromId(app, db)
   // Other route groups could go here, in the future
-
+  getDepartmentsClean(app, db)
   getStatus(app, db)
 };

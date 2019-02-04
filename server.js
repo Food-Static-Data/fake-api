@@ -11,9 +11,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 require('./app/routes')(app, {});
 
 
-app.listen(port, () => {
-  console.log('We are live on ' + port);
-});
+
+if (process.env.NODE_ENV !== 'test') {
+  app.listen(port, () => {
+    console.log('We are live on ' + port);
+  });
+}
 
 
 // MongoClient.connect(db.url, (err, database) => {
@@ -34,3 +37,4 @@ app.listen(port, () => {
 //     console.log('We are live on ' + port);
 //   });
 // })
+module.exports = app
