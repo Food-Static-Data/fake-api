@@ -1,4 +1,4 @@
-const { groceristar } = require('@groceristar/groceristar-fetch')
+const { groceristar, showcase } = require('@groceristar/groceristar-fetch')
 const departments = groceristar.getDepartments();
 
 console.log( departments );
@@ -20,7 +20,7 @@ console.log( departments );
 // }
 
 function getGroceryDataFromId2(id){
-
+//@TODO doesn't work, return null
   console.log(getGroceryById(id));
   let grocery     = getGroceryById(id)[0];
   let groceryName = grocery.name;
@@ -46,11 +46,13 @@ const getRoutes = function(app, db) {
 };
 
 //***
+//@TODO doesn't work, return null
 const getGroceryById = function(app, db) {
 
-  app.get('/grocery/:id', (req, res) => {
-    // console.log(req.body)
-    const result = groceristar.getGroceryById(req.params.id);
+  app.get('/grocery/:id/', (req, res) => {
+
+    const result = groceristar.getGroceryById();
+    console.log(req.params.id)
     res.send(result)
   });
 
@@ -58,7 +60,7 @@ const getGroceryById = function(app, db) {
 
 const getFullGrocery = function(app, db) {
 
-  app.get('/grocery-name/:name', (req, res) => {
+  app.get('/grocery/name/:name', (req, res) => {
     // console.log(req.body)
     const result = groceristar.getGroceryByNameWithDepAndIng(req.params.name);
     res.send(result)
@@ -68,10 +70,11 @@ const getFullGrocery = function(app, db) {
 
 const getGroceryCollection = function(app, db) {
 
-  app.get('/grocery/collection', (req, res) => {
+  app.get('/grocery-collection', (req, res) => {
     // console.log(req.body)
 
-    const result = groceristar.getGroceryShowcase()
+    const result = showcase.getGroceryShowcase()
+    console.log(result)
     res.send(result)
   });
 
@@ -79,8 +82,8 @@ const getGroceryCollection = function(app, db) {
 
 const getAllGrocery = function(app, db) {
 
-  app.get('/grocery/all', (req, res) => {
-    // console.log(req.body)
+  app.get('/grocery-all', (req, res) => {
+    console.log("Grocery ALL")
     // groceristar.getAllGrocery();
     const result = groceristar.getAllGrocery();
     res.send(result)
@@ -89,14 +92,21 @@ const getAllGrocery = function(app, db) {
 };
 
 const getGroceryDataFromId = function(app, db) {
-
-  app.get('/grocery/data/:id', (req, res) => {
-    // console.log(req.body)
-    res.send('Hello')
+app.get('/grocery/data/:id/', (req, res) => {
+    console.log("Request");
+    console.log(req.params.id)
+    // res.send('Hello')
     const result = groceristar.getGroceryDataFromId(req.params.id);
     res.send(result)
   });
 
+};
+
+const getGroceriesWithDepIngKey = function(app, db) {
+  app.get('/groceries', (req, res) => {
+    const result = groceristar.getGroceriesWithDepIngKey();
+    res.send(result)
+  });
 };
 //
 // const getNotes = function(app, db) {
@@ -143,5 +153,6 @@ module.exports  = {
   getGroceryDataFromId,
   getGroceryCollection,
   getAllGrocery,
-  getRoutes
+  getRoutes,
+  getGroceriesWithDepIngKey
 }
