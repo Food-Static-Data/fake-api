@@ -20,17 +20,7 @@ const departments = groceristar.getDepartments();
 //   return groceristar.getAllGrocery();
 // }
 
-function getGroceryDataFromId2(id){
-//@TODO doesn't work, return null
-  console.log(getGroceryById(id));
-  let grocery     = getGroceryById(id)[0];
-  let groceryName = grocery.name;
-  let groceryWithDepAndIng = getFullGrocery(groceryName);
-  return {
-    'name': groceryName,
-    'items': groceryWithDepAndIng
-  };
-}
+
 
 
 const getRoutes = function(app, db) {
@@ -58,8 +48,8 @@ const getDepartmentsClean = function(app, db) {
 //@TODO doesn't work, return null
 const getGroceryById = function(app, db) {
   app.get('/grocery/:id/', (req, res) => {
-
-    const result = groceristar.getGroceryById(req.params.id);
+    console.log(req.params.id);
+    const result = groceristar.getGroceryById(parseInt(req.params.id, 10));
     res.send(result)
   });
 
@@ -76,7 +66,7 @@ const getFullGrocery = function(app, db) {
 
 const getGroceryCollection = function(app, db) {
   app.get('/grocery-collection', (req, res) => {
-    // console.log(req.body)
+    console.log("Collection request")
     const result = showcase.getGroceryShowcase()
     res.send(result)
   });
@@ -93,13 +83,30 @@ const getAllGrocery = function(app, db) {
 };
 
 const getGroceryDataFromId = function(app, db) {
-app.get('/grocery/data/:id/', (req, res) => {
-    // res.send('Hello')
-    const result = groceristar.getGroceryDataFromId(req.params.id);
+  app.get('/grocery/data/:id/', (req, res) => {
+
+    let id = parseInt(req.params.id, 10);
+    console.log("id" + id);
+
+    const result =  getGroceryDataFromId2(id);
+
     res.send(result)
   });
 
 };
+
+function getGroceryDataFromId2(id){
+//@TODO doesn't work, return null
+  console.log(groceristar.getGroceryById(id));
+  let grocery     = groceristar.getGroceryById(id)[0];
+  let groceryName = grocery.name;
+  let groceryWithDepAndIng = groceristar.getGroceryByNameWithDepAndIng(groceryName);
+  return {
+    'name': groceryName,
+    'items': groceryWithDepAndIng
+  };
+}
+
 
 const getGroceriesWithDepIngKey = function(app, db) {
   app.get('/groceries', (req, res) => {
