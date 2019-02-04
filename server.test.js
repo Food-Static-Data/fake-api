@@ -5,6 +5,7 @@ const request      = require('supertest');
 const app = require('./server');
 
 // const app = require('../../src/app')
+const { groceristar, showcase } = require('@groceristar/groceristar-fetch')
 
 
 
@@ -82,10 +83,14 @@ describe("Test /hello", () => {
     const response = await request(app).get('/hello');
     expect(response.text).toBe('Hello');
   })
-  it('Should return Hello!', async () => {
-    const response = await request(app).get('/hello');
-    expect(response.text).toBe('Hello');
+
+  it('Response equal getGroceryShowcase()!', async () => {
+    const response = await request(app).get('/grocery-collection');
+    let result = JSON.parse(response.text);
+    // console.log(result);
+    expect(result).toEqual(showcase.getGroceryShowcase());
   })
+
   test('Should respons the Get method getRoutes()', (done) => {
     request(app).get('/hello').then((response) => {
       expect(response.text).toBe('Hello');
