@@ -48,7 +48,6 @@ const getDepartmentsClean = function(app, db) {
 //@TODO doesn't work, return null
 const getGroceryById = function(app, db) {
   app.get('/grocery/:id/', (req, res) => {
-    console.log(req.params.id);
     const result = groceristar.getGroceryById(parseInt(req.params.id, 10));
     res.send(result)
   });
@@ -96,8 +95,6 @@ const getGroceryDataFromId = function(app, db) {
 };
 
 function getGroceryDataFromId2(id){
-//@TODO doesn't work, return null
-  console.log(groceristar.getGroceryById(id));
   let grocery     = groceristar.getGroceryById(id)[0];
   let groceryName = grocery.name;
   let groceryWithDepAndIng = groceristar.getGroceryByNameWithDepAndIng(groceryName);
