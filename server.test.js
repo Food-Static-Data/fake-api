@@ -70,12 +70,12 @@ describe('Test the root path', () => {
       });
     });
 
-    // test('It should response the GET method getGroceriesWithDepIngKey()',  (done) => {
-    //   request(app).get('/groceries').then((response) => {
-    //     expect(response.statusCode).toBe(200);
-    //     done();
-    //   });
-    // },10000);
+    test('It should response the GET method getGroceriesWithDepIngKey()',  (done) => {
+      request(app).get('/groceries').then((response) => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+    },10000);
 });
 
 describe("Test /hello", () => {

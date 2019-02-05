@@ -4,7 +4,7 @@ const { getRoutes,
   getFullGrocery,
   getAllGrocery,
   getGroceryDataFromId,
-  // getGroceriesWithDepIngKey,
+  getGroceriesWithDepIngKey,
   getStatus,
   getDepartmentsClean
  } = require('./routes');
@@ -17,7 +17,7 @@ module.exports = function(app, db) {
   getGroceryById(app, db)
   getGroceryCollection(app, db)
   getFullGrocery(app, db)
-  // getGroceriesWithDepIngKey(app, db)
+  getGroceriesWithDepIngKey(app, db)
   getAllGrocery(app, db)
   getGroceryDataFromId(app, db)
   // Other route groups could go here, in the future
