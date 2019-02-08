@@ -142,6 +142,13 @@
     underscore "^1.9.1"
     uuid "3.3.2"
 
+"@groceristar/sd-wrapper@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.1.tgz#78382f66b8efa2297f1e65b599220003e6421aea"
+  integrity sha512-1rZls2EXBf0i8O0kiQSaQbnQoV44wbS285/9Tj4LuonYRnJaEV2d3kCPY6LUZ8PaxdDRYHVyack0JX4rT3144w==
+  dependencies:
+    uuid "^3.3.2"
+
 abab@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/abab/-/abab-2.0.0.tgz#aba0ab4c5eee2d4c79d3487d85450fb2376ebb0f"
