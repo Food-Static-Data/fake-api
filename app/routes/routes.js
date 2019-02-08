@@ -1,4 +1,4 @@
-const { groceristar, showcase } = require('@groceristar/groceristar-fetch')
+const { groceristar, showcase, chickenKyiv } = require('@groceristar/groceristar-fetch')
 const departments = groceristar.getDepartments();
 // const collection  = groceristar.getGroceryShowcase();
 // console.log()
@@ -111,7 +111,15 @@ const getGroceriesWithDepIngKey = function(app, db) {
     res.send(result)
   });
 };
-//
+
+// chickenKyiv
+const getFirstFiveRecipes = function(app, db) {
+  app.get('/ck-firstfivefecipes', (req, res) => {
+  const result = chickenKyiv.getFirstFiveRecipes();
+  res.send(result)
+});
+};
+
 // const getNotes = function(app, db) {
 //
 //   app.get('/notes', (req, res) => {
@@ -165,5 +173,7 @@ module.exports  = {
   getDepartmentsClean,
   getGroceriesWithDepIngKey,
 
-  getStatus
+  getStatus,
+
+  getFirstFiveRecipes
 }

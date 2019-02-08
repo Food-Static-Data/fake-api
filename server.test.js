@@ -70,6 +70,13 @@ describe('Test the root path', () => {
       });
     });
 
+    test('It should response the GET method getFirstFiveRecipes()', (done) => {
+      request(app).get('/ck-firstfivefecipes').then((response) => {
+        expect(response.statusCode).toBe(200);
+        done();
+      });
+    });
+
     test('It should response the GET method getGroceriesWithDepIngKey()',  (done) => {
       request(app).get('/groceries').then((response) => {
         expect(response.statusCode).toBe(200);
