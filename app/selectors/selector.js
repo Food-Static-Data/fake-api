@@ -1,30 +1,33 @@
+const { groceristar,
+  chickenKyiv,
+  showcase,
+  gsLoopback } = require("@groceristar/groceristar-fetch");
 
-import { groceristar, chickenKyiv, showcase, gsLoopback } from "@groceristar/groceristar-fetch";
+function getSDepartments( id ) {
+  return groceristar.getDepartments();
+}
 
-
-function getGroceryById( id ) {
+function getSGroceryById( id ) {
   return groceristar.getGroceryById(id);
 }
 
-function getFullGrocery( name ) {
+function getSFullGrocery( name ) {
   return groceristar.getGroceryByNameWithDepAndIng(name);
 }
 
-function getGroceryCollection(){
-  return showcase.getGroceryShowcase();
-}
-
-function getAllGrocery(){
+function getSAllGrocery(){
   return groceristar.getAllGrocery();
 }
 
+function getSGroceriesWithDepIngKey(){
+  return groceristar.getGroceriesWithDepIngKey();
+}
 
-function getGroceryDataFromId(id){
+function getSGroceryDataFromId(id){
 
-  console.log(getGroceryById(id));
-  let grocery     = getGroceryById(id)[0];
+  let grocery     = getSGroceryById(id)[0];
   let groceryName = grocery.name;
-  let groceryWithDepAndIng = getFullGrocery(groceryName);
+  let groceryWithDepAndIng = getSFullGrocery(groceryName);
   return {
     'name': groceryName,
     'items': groceryWithDepAndIng
@@ -32,13 +35,17 @@ function getGroceryDataFromId(id){
 }
 
 
-//----------
+// -----showcase------
+function getSGroceryCollection(){
+  return showcase.getGroceryShowcase();
+}
 
+//--------chickenKyiv-------
 function getRandomRecipe(){
   return chickenKyiv.getRandomRecipe()
 }
 
-function getFirstFiveRecipes(){
+function getSFirstFiveRecipes(){
   return chickenKyiv.getFirstFiveRecipes();
 }
 
@@ -70,21 +77,23 @@ function getIngredientsSampleFromDB(){
   return gsLoopback.getIngredientsSampleFromDB();
 };
 
-export {
-  getGroceryById,
-  getFullGrocery,
-  getGroceryDataFromId,
-  getGroceryCollection,
-  getAllGrocery,
+module.exports = {
+  getSGroceryById,
+  getSFullGrocery,
+  getSGroceryDataFromId,
+  getSGroceryCollection,
+  getSAllGrocery,
+  getSDepartments,
 
   getRandomRecipe,
-  getFirstFiveRecipes,
+  getSFirstFiveRecipes,
   getFiveRandomIngredients,
   getRecipeChickenKyivById,
   getShowcaseFiveRecipes,
 
   getUltimateGrocery,
   getGLwithUserRelations,
-  getIngredientsSampleFromDB
+  getIngredientsSampleFromDB,
 
+  getSGroceriesWithDepIngKey
 }
