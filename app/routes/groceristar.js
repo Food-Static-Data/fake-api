@@ -1,5 +1,3 @@
-const { groceristar, showcase, chickenKyiv } = require('@groceristar/groceristar-fetch')
-const departments = groceristar.getDepartments();
 // const collection  = groceristar.getGroceryShowcase();
 // console.log()
 // console.log( departments );
@@ -30,10 +28,8 @@ const { getSDepartments,
  } = require('../selectors/selector')
 
 
-
 const getRoutes = function(app, db) {
   app.get('/hello', (req, res) => {
-    // console.log(req.body)
     res.send('Hello')
   });
 };
@@ -57,14 +53,6 @@ const getFullGrocery = function(app, db) {
   app.get('/grocery/name/:name', (req, res) => {
     // console.log(req.body)
     const result = getSFullGrocery(req.params.name);
-    res.send(result)
-  });
-
-};
-
-const getGroceryCollection = function(app, db) {
-  app.get('/grocery-collection', (req, res) => {
-    const result = getSGroceryCollection()
     res.send(result)
   });
 
@@ -94,12 +82,7 @@ const getGroceriesWithDepIngKey = function(app, db) {
 };
 
 // chickenKyiv
-const getFirstFiveRecipes = function(app, db) {
-  app.get('/ck-firstfivefecipes', (req, res) => {
-  const result = getSFirstFiveRecipes();
-  res.send(result)
-});
-};
+
 
 // const getNotes = function(app, db) {
 //
@@ -122,7 +105,6 @@ module.exports  = {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId,
-  getGroceryCollection,
   getAllGrocery,
   getRoutes,
 
@@ -131,5 +113,4 @@ module.exports  = {
 
   getStatus,
 
-  getFirstFiveRecipes
 }

@@ -1,4 +1,7 @@
-const { groceristar, chickenKyiv, showcase, gsLoopback } = require("@groceristar/groceristar-fetch");
+const { groceristar,
+  chickenKyiv,
+  showcase,
+  gsLoopback } = require("@groceristar/groceristar-fetch");
 
 function getSDepartments( id ) {
   return groceristar.getDepartments();
@@ -10,10 +13,6 @@ function getSGroceryById( id ) {
 
 function getSFullGrocery( name ) {
   return groceristar.getGroceryByNameWithDepAndIng(name);
-}
-
-function getSGroceryCollection(){
-  return showcase.getGroceryShowcase();
 }
 
 function getSAllGrocery(){
@@ -36,8 +35,12 @@ function getSGroceryDataFromId(id){
 }
 
 
-//----------
+// -----showcase------
+function getSGroceryCollection(){
+  return showcase.getGroceryShowcase();
+}
 
+//--------chickenKyiv-------
 function getRandomRecipe(){
   return chickenKyiv.getRandomRecipe()
 }
