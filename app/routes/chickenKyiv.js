@@ -7,6 +7,6 @@ const getFirstFiveRecipes = function(app, db) {
 });
 };
 
-module.exports ={
+module.exports = {
   getFirstFiveRecipes
 }
