@@ -144,10 +144,10 @@
     underscore "^1.9.1"
     uuid "3.3.2"
 
-"@groceristar/sd-wrapper@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.2.tgz#f6dbf20cb7d1755787ddf8fdf6135d2af4232fd0"
-  integrity sha512-zXJigGAu5S7IrX2tQRRbvEcrRygbe+CZsKkBKsHrsnnJDX8UU9Gi96nW62AeF/g6jUEnx+Uh6S7+d+/AmfhTIw==
+"@groceristar/sd-wrapper@^1.0.2", "@groceristar/sd-wrapper@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-1.0.5.tgz#d8361c2e8e77fd93cc09d79b3f8a00a131b9a66e"
+  integrity sha512-hlVKFUaEgc9+FwVAZqALYt9sTjU6K+9fzqiYIwC3I0gFRndAsEf9kb13ZBptSzEdY0KKptorSyJV/mFWiknkJg==
   dependencies:
     fs "^0.0.1-security"
     path "^0.12.7"
