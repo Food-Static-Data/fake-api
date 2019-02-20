@@ -23,6 +23,6 @@
     "supertest": "^3.4.2"
   },
   "devDependencies": {
-    "@groceristar/sd-wrapper": "^1.0.5"
+    "@groceristar/sd-wrapper": "^1.0.6"
   }
 }
