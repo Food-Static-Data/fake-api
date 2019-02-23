@@ -12,7 +12,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@groceristar/groceristar-fetch": "^1.2.5",
+    "@groceristar/groceristar-fetch": "^1.2.6",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
