@@ -131,12 +131,12 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@groceristar/groceristar-fetch@^1.2.6":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.2.6.tgz#6b8c32359db3e338a0f01f4cfe7bf9036f756a48"
-  integrity sha512-9JqYjyLmY3FtmSiyLfkhTqPgZOxL4FyuKemZ9YroCpfUxaAypQVTiZfvB7FT0t7Evq7OiUFrMDxn9Wgu5OHp0Q==
+"@groceristar/groceristar-fetch@^1.2.7":
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-1.2.7.tgz#77afbd0159a5816a8c8c336ac3268cbbf10c0f10"
+  integrity sha512-oyX+e/CqxUXIGtDcemDC+cV1H4/iElfci3ItaFI3iBr8qNhfj/WyURo7kQontiIUAzvYpFUgfKdOO11Q+m5pbw==
   dependencies:
-    "@groceristar/sd-wrapper" "^1.0.6"
+    "@groceristar/sd-wrapper" "^1.0.7"
     dayjs "^1.8.0"
     fs "0.0.2"
     lodash "^4.17.10"
