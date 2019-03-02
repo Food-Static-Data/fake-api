@@ -34,6 +34,14 @@ const getRoutes = function(app, db) {
   });
 };
 
+const getAllGrocery = function(app, db) {
+  app.get('/grocery/all', (req, res) => {
+    console.log("grocery All");
+    const result = getSAllGrocery();
+    res.send(result)
+  });
+};
+
 const getDepartmentsClean = function(app, db) {
   app.get('/departments/all', (req, res) => {
     res.send( getSDepartments() ) // this works only becase send automatically understand that we have an array or object here
@@ -41,8 +49,10 @@ const getDepartmentsClean = function(app, db) {
 }
 
 //***
+
+
 const getGroceryById = function(app, db) {
-  app.get('/grocery/:id/', (req, res) => {
+  app.get('/grocery/id/:id/', (req, res) => {
     const result = getSGroceryById(parseInt(req.params.id, 10));
     res.send(result)
   });
@@ -58,13 +68,7 @@ const getFullGrocery = function(app, db) {
 
 };
 
-const getAllGrocery = function(app, db) {
-  app.get('/grocery-all', (req, res) => {
-    const result = getSAllGrocery();
-    res.send(result)
-  });
 
-};
 
 const getGroceryDataFromId = function(app, db) {
   app.get('/grocery/data/:id/', (req, res) => {
