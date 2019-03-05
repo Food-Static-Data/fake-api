@@ -18,75 +18,68 @@
 //   return groceristar.getAllGrocery();
 // }
 const { getSDepartments,
-   getSGroceryById,
-   getSFullGrocery,
-   getSGroceryCollection,
-   getSAllGrocery,
-   getSGroceryDataFromId,
-   getSGroceriesWithDepIngKey,
-   getSFirstFiveRecipes
- } = require('../selectors/selector')
+  getSGroceryById,
+  getSFullGrocery,
+  getSGroceryCollection,
+  getSAllGrocery,
+  getSGroceryDataFromId,
+  getSGroceriesWithDepIngKey,
+  getSFirstFiveRecipes
+} = require('../selectors/selector')
 
-
-const getRoutes = function(app, db) {
+const getRoutes = function (app, db) {
   app.get('/hello', (req, res) => {
     res.send('Hello')
-  });
-};
-
-const getAllGrocery = function(app, db) {
-  app.get('/grocery/all', (req, res) => {
-    console.log("grocery All");
-    const result = getSAllGrocery();
-    res.send(result)
-  });
-};
-
-const getDepartmentsClean = function(app, db) {
-  app.get('/departments/all', (req, res) => {
-    res.send( getSDepartments() ) // this works only becase send automatically understand that we have an array or object here
   })
 }
 
-//***
-
-
-const getGroceryById = function(app, db) {
-  app.get('/grocery/id/:id/', (req, res) => {
-    const result = getSGroceryById(parseInt(req.params.id, 10));
+const getAllGrocery = function (app, db) {
+  app.get('/grocery/all', (req, res) => {
+    console.log('grocery All')
+    const result = getSAllGrocery()
     res.send(result)
-  });
+  })
+}
 
-};
+const getDepartmentsClean = function (app, db) {
+  app.get('/departments/all', (req, res) => {
+    res.send(getSDepartments()) // this works only becase send automatically understand that we have an array or object here
+  })
+}
 
-const getFullGrocery = function(app, db) {
+//* **
+
+const getGroceryById = function (app, db) {
+  app.get('/grocery/id/:id/', (req, res) => {
+    const result = getSGroceryById(parseInt(req.params.id, 10))
+    res.send(result)
+  })
+}
+
+const getFullGrocery = function (app, db) {
   app.get('/grocery/name/:name', (req, res) => {
     // console.log(req.body)
-    const result = getSFullGrocery(req.params.name);
+    const result = getSFullGrocery(req.params.name)
     res.send(result)
-  });
+  })
+}
 
-};
-
-
-
-const getGroceryDataFromId = function(app, db) {
+const getGroceryDataFromId = function (app, db) {
   app.get('/grocery/data/:id/', (req, res) => {
-    let id = parseInt(req.params.id, 10);
-    const result =  getSGroceryDataFromId(id);
+    let id = parseInt(req.params.id, 10)
+    const result = getSGroceryDataFromId(id)
     res.send(result)
-  });
-};
+  })
+}
 
-const getGroceriesWithDepIngKey = function(app, db) {
+const getGroceriesWithDepIngKey = function (app, db) {
   app.get('/groceries', (req, res) => {
-    const result = getSGroceriesWithDepIngKey();
+    const result = getSGroceriesWithDepIngKey()
     res.send(result)
-  });
-};
+  })
+}
 
 // chickenKyiv
-
 
 // const getNotes = function(app, db) {
 //
@@ -98,14 +91,13 @@ const getGroceriesWithDepIngKey = function(app, db) {
 // };
 //
 
-
-const getStatus = function(app, db) {
+const getStatus = function (app, db) {
   app.get('/status', (req, res) => {
-      res.status(200).send({ date: new Date() })
+    res.status(200).send({ date: new Date() })
   })
 }
 
-module.exports  = {
+module.exports = {
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId,
@@ -115,6 +107,6 @@ module.exports  = {
   getDepartmentsClean,
   getGroceriesWithDepIngKey,
 
-  getStatus,
+  getStatus
 
 }

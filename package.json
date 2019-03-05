@@ -7,7 +7,9 @@
     "test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
     "watch": "NODE_ENV=test jest --forceExit --watch --detectOpenHandles",
     "dev": "nodemon server.js",
-    "files": "node --experimental-modules files.js"
+    "files": "node --experimental-modules files.js",
+    "lint":"standard",
+    "code-fix": "standard --fix"
   },
   "author": "",
   "license": "MIT",
@@ -23,6 +25,7 @@
     "supertest": "^3.4.2"
   },
   "devDependencies": {
-    "@groceristar/sd-wrapper": "^1.0.10"
+    "@groceristar/sd-wrapper": "^1.0.10",
+    "standard": "^12.0.1"
   }
 }

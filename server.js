@@ -1,24 +1,20 @@
-const express        = require('express');
-const MongoClient    = require('mongodb').MongoClient;
-const bodyParser     = require('body-parser');
-const app            = express();
-const db = require('./app/config/db');
+const express = require('express')
+const MongoClient = require('mongodb').MongoClient
+const bodyParser = require('body-parser')
+const app = express()
+const db = require('./app/config/db')
 
-var port = process.env.PORT || 3000;
+var port = process.env.PORT || 3000
 
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.use(bodyParser.urlencoded({ extended: true }));
-
-require('./app/routes')(app, {});
-
-
+require('./app/routes')(app, {})
 
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(port, "0.0.0.0", function() {
-    console.log("Listening on Port" + port);
-});
+  app.listen(port, '0.0.0.0', function () {
+    console.log('Listening on Port' + port)
+  })
 }
-
 
 // MongoClient.connect(db.url, (err, database) => {
 //   if (err) return console.log(err)

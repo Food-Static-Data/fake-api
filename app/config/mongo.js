@@ -1,11 +1,11 @@
-'use strict';
+'use strict'
 
-const MongoClient = require('mongodb').MongoClient;
+const MongoClient = require('mongodb').MongoClient
 
 module.exports = function () {
-  const app = this;
-  const config = app.get('mongodb');
-  const promise = MongoClient.connect(config);
+  const app = this
+  const config = app.get('mongodb')
+  const promise = MongoClient.connect(config)
 
-  app.set('mongoClient', promise);
-};
+  app.set('mongoClient', promise)
+}
