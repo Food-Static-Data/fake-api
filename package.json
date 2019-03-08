@@ -8,7 +8,7 @@
     "watch": "NODE_ENV=test jest --forceExit --watch --detectOpenHandles",
     "dev": "nodemon server.js",
     "files": "node --experimental-modules files.js",
-    "lint":"standard",
+    "lint": "standard",
     "code-fix": "standard --fix"
   },
   "author": "",
