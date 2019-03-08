@@ -20,11 +20,9 @@
 const { getSDepartments,
   getSGroceryById,
   getSFullGrocery,
-  getSGroceryCollection,
   getSAllGrocery,
   getSGroceryDataFromId,
   getSGroceriesWithDepIngKey,
-  getSFirstFiveRecipes
 } = require('../selectors/selector')
 
 const getRoutes = function (app, db) {
@@ -34,7 +32,7 @@ const getRoutes = function (app, db) {
 }
 
 const getAllGrocery = function (app, db) {
-  app.get('/grocery/all', (req, res) => {
+  app.get('/gs/get-all-grocery', (req, res) => {
     console.log('grocery All')
     const result = getSAllGrocery()
     res.send(result)
@@ -42,7 +40,7 @@ const getAllGrocery = function (app, db) {
 }
 
 const getDepartmentsClean = function (app, db) {
-  app.get('/departments/all', (req, res) => {
+  app.get('/gs/get-departments-clean', (req, res) => {
     res.send(getSDepartments()) // this works only becase send automatically understand that we have an array or object here
   })
 }
@@ -50,14 +48,14 @@ const getDepartmentsClean = function (app, db) {
 //* **
 
 const getGroceryById = function (app, db) {
-  app.get('/grocery/id/:id/', (req, res) => {
+  app.get('/gs/get-grocery-by-id/:id/', (req, res) => {
     const result = getSGroceryById(parseInt(req.params.id, 10))
     res.send(result)
   })
 }
 
 const getFullGrocery = function (app, db) {
-  app.get('/grocery/name/:name', (req, res) => {
+  app.get('/gs/get-full-grocery/:name', (req, res) => {
     // console.log(req.body)
     const result = getSFullGrocery(req.params.name)
     res.send(result)
@@ -65,7 +63,7 @@ const getFullGrocery = function (app, db) {
 }
 
 const getGroceryDataFromId = function (app, db) {
-  app.get('/grocery/data/:id/', (req, res) => {
+  app.get('/gs/get-grocery-data-from-id/:id/', (req, res) => {
     let id = parseInt(req.params.id, 10)
     const result = getSGroceryDataFromId(id)
     res.send(result)
@@ -73,7 +71,7 @@ const getGroceryDataFromId = function (app, db) {
 }
 
 const getGroceriesWithDepIngKey = function (app, db) {
-  app.get('/groceries', (req, res) => {
+  app.get('/gs/get-groceries-with-dep-ing-key', (req, res) => {
     const result = getSGroceriesWithDepIngKey()
     res.send(result)
   })
@@ -98,15 +96,13 @@ const getStatus = function (app, db) {
 }
 
 module.exports = {
+  getAllGrocery,
+  getDepartmentsClean,
   getGroceryById,
   getFullGrocery,
   getGroceryDataFromId,
-  getAllGrocery,
-  getRoutes,
-
-  getDepartmentsClean,
   getGroceriesWithDepIngKey,
 
+  getRoutes,
   getStatus
-
 }
