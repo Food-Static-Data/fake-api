@@ -83,6 +83,7 @@ module.exports = {
   getSGroceryCollection,
   getSAllGrocery,
   getSDepartments,
+  getSAllIngredientsByOneDepartmentKey,
 
   getRandomRecipe,
   getSFirstFiveRecipes,
