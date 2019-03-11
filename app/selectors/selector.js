@@ -32,6 +32,9 @@ function getSGroceryDataFromId (id) {
     'items': groceryWithDepAndIng
   }
 }
+function getSAllIngredientsByOneDepartmentKey(department, groceryId){
+  return groceristar.getAllIngredientsByOneDepartmentKey(department, groceryId)
+}
 
 // -----showcase------
 function getSGroceryCollection () {

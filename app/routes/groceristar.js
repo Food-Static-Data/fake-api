@@ -23,6 +23,7 @@ const { getSDepartments,
   getSAllGrocery,
   getSGroceryDataFromId,
   getSGroceriesWithDepIngKey,
+  getSAllIngredientsByOneDepartmentKey
 } = require('../selectors/selector')
 
 const getRoutes = function (app, db) {
@@ -77,6 +78,13 @@ const getGroceriesWithDepIngKey = function (app, db) {
   })
 }
 
+const getAllIngredientsByOneDepartmentKey = function (app, db) {
+  app.get('/gs/get-all-ingredients-by-one-department-key/:department/:groceryId', (req, res) => {
+    let id = parseInt(req.params.groceryId,10)
+    const result = getSAllIngredientsByOneDepartmentKey(req.params.department, id)
+    res.send(result)
+  })
+}
 // chickenKyiv
 
 // const getNotes = function(app, db) {
@@ -102,7 +110,8 @@ module.exports = {
   getFullGrocery,
   getGroceryDataFromId,
   getGroceriesWithDepIngKey,
-
+  getAllIngredientsByOneDepartmentKey,
+  
   getRoutes,
   getStatus
 }
