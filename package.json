@@ -18,7 +18,7 @@
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
-    "jest": "^24.3.1",
+    "jest": "^24.4.0",
     "mongodb": "^3.1.13",
     "nodemon": "^1.18.10",
     "path": "^0.12.7",
