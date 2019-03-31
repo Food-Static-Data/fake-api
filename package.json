@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "NODE_ENV=test jest --forceExit --detectOpenHandles",
+    "test2": " jest --forceExit --detectOpenHandles",
     "watch": "NODE_ENV=test jest --forceExit --watch --detectOpenHandles",
     "dev": "nodemon server.js",
     "files": "node --experimental-modules files.js",
@@ -14,7 +15,7 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@groceristar/groceristar-fetch": "^2.0.14",
+    "@groceristar/groceristar-fetch": "^2.1.2",
     "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "fs": "^0.0.1-security",
