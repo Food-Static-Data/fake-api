@@ -5,6 +5,7 @@ const {
   gsLoopback 
 } = require('@groceristar/groceristar-fetch')
 
+
 function getSDepartments (id) {
   return groceristar.getDepartments()
 }
