@@ -1,5 +1,6 @@
 const { getFileData } = require('../selectors/readFile');
-const { writeFile } = require('../selectors/writeFile');
+const { writeFile }   = require('../selectors/writeFile');
+
 const getFile = function (app, db) {
     app.get('/get-file', (req, res) => {
         getFileData()

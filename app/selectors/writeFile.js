@@ -6,8 +6,10 @@ const { promisify } = require("util");
 const writeFilePromisify = promisify(fs.writeFile);
 
 async function main() {
-    await writeFilePromisify("./app/selectors/users.json",
-    JSON.stringify(staticData.users));
+    await writeFilePromisify(
+      "./app/selectors/users.json",
+      JSON.stringify(staticData.users)
+  );
 
     console.info("file created successfully with promisify and async/await!");
 }

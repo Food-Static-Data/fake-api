@@ -1,8 +1,8 @@
-const { 
+const {
   groceristar,
   chickenKyiv,
   showcase,
-  gsLoopback 
+  gsLoopback
 } = require('@groceristar/groceristar-fetch')
 
 
@@ -35,6 +35,7 @@ function getSGroceryDataFromId (id) {
     'items': groceryWithDepAndIng
   }
 }
+
 function getSAllIngredientsByOneDepartmentKey(department, groceryId){
   return groceristar.getAllIngredientsByOneDepartmentKey(department, groceryId)
 }
