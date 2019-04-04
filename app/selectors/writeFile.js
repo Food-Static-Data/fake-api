@@ -5,17 +5,37 @@ const { promisify } = require("util");
 
 const writeFilePromisify = promisify(fs.writeFile);
 
-async function main() {
+async function main(path, data) {
+    
     await writeFilePromisify(
-      "./app/selectors/users.json",
-      JSON.stringify(staticData.users)
+      path, data
   );
 
-    console.info("file created successfully with promisify and async/await!");
+    console.info("file created successfully!");
 }
 
 function writeFile(){
-    main().catch(error => console.error(error));
+    var path = "./app/selectors/users.json";
+    var data = staticData.users;
+    // var dataStr = JSON.stringify(users);
+    // console.log(typeof users);
+    // console.log(typeof usersStr);
+    if (typeof data != 'undefined'){
+        if ((typeof data) == 'object'){
+            var dataStr = JSON.stringify(data);
+            
+            if (typeof dataStr == 'string'){
+                main(path, dataStr).catch(error => console.error(error));
+
+            }else{
+                console.error("Error occured after stringify or variabe has another type not string")
+            }
+        }
+    }else {
+        console.error("Error variable is undefined")
+    }
+    
+   
 }
 
 module.exports = {
