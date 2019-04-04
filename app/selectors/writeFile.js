@@ -30,11 +30,11 @@ function writeFile(path, data){
             if (typeof dataStr == 'string'){
                 main(path, dataStr).catch(error => console.error(error));
 
-            }else{
+            } else {
                 console.error("Error occured after stringify or variabe has another type not string")
             }
         }
-    }else {
+    } else {
         console.error("Error variable is undefined")
     }
 }
