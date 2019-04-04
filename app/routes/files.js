@@ -1,5 +1,5 @@
 const { getFileData } = require('../selectors/readFile');
-const { writeFile }   = require('../selectors/writeFile');
+const { writeFile, writeFiles  }   = require('../selectors/writeFile');
 
 const getFile = function (app, db) {
     app.get('/get-file', (req, res) => {
@@ -15,7 +15,15 @@ const getWriteFile = function (app, db) {
     })
 }
 
+const getWriteFiles = function (app, db) {
+    app.get('/get-write-files', (req, res) => {
+        writeFiles()
+        res.send('Writed')
+    })
+}
+
 module.exports = {
     getFile,
-    getWriteFile
+    getWriteFile,
+    getWriteFiles,
 }

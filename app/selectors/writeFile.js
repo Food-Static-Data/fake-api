@@ -13,11 +13,13 @@ async function main(path, data) {
 
     console.info("file created successfully!");
 }
-
-function writeFile(){
+/**
+ * Write in file
+ * @param {String} path 
+ * @param {Object} data 
+ */
+function writeFile(path, data){
     
-    var path = "./app/selectors/users.json";
-    var data = staticData.users;
     // var dataStr = JSON.stringify(users);
     // console.log(typeof users);
     // console.log(typeof usersStr);
@@ -35,10 +37,23 @@ function writeFile(){
     } else {
         console.error("Error variable is undefined")
     }
-    
-   
 }
 
+function writeFiles(){
+    // add filenames to array that exist in sd-wrapper
+    // output filenames will be the same as in array
+    // files you can find in folder output
+    var fileNames = ["users", "userGrocery", "items"]
+    
+    fileNames.map( fileName => {
+        var path = "./app/selectors/output/" + fileName + ".json";
+        var data = staticData[fileName]
+        
+        writeFile(path, data)
+    })
+    
+}
 module.exports = {
-    writeFile
+    writeFile, 
+    writeFiles
 }
