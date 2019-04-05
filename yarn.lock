@@ -139,9 +139,9 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@^2.0.9":
-  version "2.0.9"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-2.0.9.tgz#b9351afd0ad04d30cfad422a574337155a0eba9e"
+"@groceristar/sd-wrapper@^2.0.10", "@groceristar/sd-wrapper@^2.0.9":
+  version "2.0.10"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-2.0.10.tgz#e6dd04937734971fed8e92590806cfa249aaf48d"
   dependencies:
     path "^0.12.7"
     uuid "^3.3.2"
