@@ -139,9 +139,9 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@4.0.1":
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.0.1.tgz#62b81af0b7fe88bbcc8368fd07144fed8ea35b4e"
+"@groceristar/sd-wrapper@4.0.2":
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.0.2.tgz#165a5789d160f59e3d55f83ce6c6a19cd778f97d"
   dependencies:
     dayjs "^1.8.13"
     lodash "^4.17.11"
