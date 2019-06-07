@@ -139,15 +139,16 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@4.5.0":
-  version "4.5.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.5.0.tgz#883ee058711e9db66d1fd16303cb6d102abe8576"
+"@groceristar/sd-wrapper@4.9.0":
+  version "4.9.0"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.9.0.tgz#6139734fe850ef49c91a3f986b6b438ea470240f"
   dependencies:
     csv-parser "^2.3.0"
-    dayjs "^1.8.13"
+    dayjs "^1.8.14"
     lodash "^4.17.11"
     path "^0.12.7"
     uuid "^3.3.2"
+    yarn "^1.16.0"
 
 "@groceristar/sd-wrapper@^3.0.0":
   version "3.0.3"
@@ -1039,6 +1040,10 @@ data-urls@^1.0.0:
 dayjs@^1.8.12, dayjs@^1.8.13:
   version "1.8.13"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.13.tgz#51b5cdad23ba508bcea939a853b492fefb7fdc47"
+
+dayjs@^1.8.14:
+  version "1.8.14"
+  resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.14.tgz#43e4f62830c2c3342c3fcd25934dc9162dbe6f38"
 
 debug-log@^1.0.0:
   version "1.0.1"
@@ -4647,3 +4652,7 @@ yargs@^12.0.2:
     which-module "^2.0.0"
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^11.1.1"
+
+yarn@^1.16.0:
+  version "1.16.0"
+  resolved "https://registry.yarnpkg.com/yarn/-/yarn-1.16.0.tgz#5701b58ac555ff91f7b889b7d791b3dc86f8f999"
