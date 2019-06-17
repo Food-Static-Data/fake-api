@@ -139,9 +139,9 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@4.9.2":
-  version "4.9.2"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.9.2.tgz#3c3b14f3f51173723b25a0b6adb39eabceeb6019"
+"@groceristar/sd-wrapper@4.9.3":
+  version "4.9.3"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.9.3.tgz#69d862b2712627bb28fd0a07c5a9189c11de57a2"
   dependencies:
     csv-parser "^2.3.0"
     dayjs "^1.8.14"
