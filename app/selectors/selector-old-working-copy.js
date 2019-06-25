@@ -1,10 +1,16 @@
-const {
-  groceristar,
-  chickenKyiv,
-  showcase,
-  gsLoopback
-} = require('@groceristar/groceristar-fetch')
+// const {
+//   groceristar,
+//   chickenKyiv,
+//   showcase,
+//   gsLoopback
+// } = require('@groceristar/groceristar-fetch')
 
+
+const chickenKyiv = require('@groceristar/recipes-methods')
+const groceristar = require('@groceristar/fetch-grocery-list')
+
+// const showcase = require('@groceristar/gl-showcase')
+// const gsLoopback = require('@groceristar/gs-loopback')
 
 function getSDepartments (id) {
   return groceristar.getDepartments()
