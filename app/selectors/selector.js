@@ -4,7 +4,10 @@ const {
 //   showcase,
 //   gsLoopback
 } = require('@groceristar/sd-wrapper')
-
+//'@groceristar/f-showcase/'
+//'@groceristar/fetch-grocery-list'
+//'@groceristar/recipes-methods'
+//'@groceristar/f-loopback'
 
 function getSKeyArrayDepAndIng () {
   return groceristar.getKeyArrayDepAndIng()
