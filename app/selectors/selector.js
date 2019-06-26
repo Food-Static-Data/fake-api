@@ -1,20 +1,16 @@
-const {
-  groceristar
+// const {
+  // groceristar
 //   chickenKyiv,
 //   showcase,
 //   gsLoopback
-} = require('@groceristar/sd-wrapper')
-//'@groceristar/f-showcase/'
-//'@groceristar/fetch-grocery-list'
-//'@groceristar/recipes-methods'
-//'@groceristar/f-loopback'
+// } = require('@groceristar/sd-wrapper')
 
 
-// const chickenKyiv = require('@groceristar/recipes-methods')
-// const groceristar = require('@groceristar/fetch-grocery-list')
-//
-// // const showcase = require('@groceristar/gl-showcase')
-// // const gsLoopback = require('@groceristar/gs-loopback')
+const chickenKyiv = require('@groceristar/recipes-methods')
+const groceristar = require('@groceristar/fetch-grocery-list')
+
+const showcase = require('@groceristar/f-showcase')
+const gsLoopback = require('@groceristar/f-loopback')
 
 
 function getSKeyArrayDepAndIng () {
