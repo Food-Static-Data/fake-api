@@ -165,12 +165,12 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/groceristar-fetch@^2.0.13":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.0.tgz#878b758e41f11cb56eac38c66f2cce80cbc88b21"
-  integrity sha512-bXONGexZ5eZaPHPNAxILYZJwDke0FUDlAgywW0hl05Wd+hCc2gkFYhCE/eRq9Z5+d+f28/sIVSrgH+l7SVye2w==
+"@groceristar/groceristar-fetch@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.4.tgz#68da9cdb16c42bd99bd930a50c00591c05e12d49"
+  integrity sha512-1FyBqBOyBOm4tG5XEBetRVi4QjdeencxOKKblc2tBCWxyQY0+jTGOYSAN+3gRhwAshKaHypUs7WHp0tmOYOFKw==
   dependencies:
-    "@groceristar/sd-wrapper" "^4.9.2"
+    "@groceristar/sd-wrapper" "^4.11.3"
     dayjs "^1.8.12"
     fs "0.0.2"
     lodash "^4.17.10"
@@ -198,6 +198,19 @@
     dayjs "^1.8.14"
     lodash "^4.17.11"
     path "^0.12.7"
+    uuid "^3.3.2"
+    yarn "^1.16.0"
+
+"@groceristar/sd-wrapper@^4.11.3":
+  version "4.11.3"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.11.3.tgz#fafa3c713d4d84e945408745974b7a515a9011a2"
+  integrity sha512-jwEmg9ELXiHSzlSbR7GBlhoglB06i4iZucgFZI8bMte2lF+S5w3/MES1noKyzyNcMIHTT8HpYvn7AQCbao47mg==
+  dependencies:
+    csv-parser "^2.3.0"
+    dayjs "^1.8.14"
+    lodash "^4.17.11"
+    path "^0.12.7"
+    path-exists "^4.0.0"
     uuid "^3.3.2"
     yarn "^1.16.0"
 

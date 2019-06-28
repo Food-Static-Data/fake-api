@@ -8,6 +8,9 @@ const {
 } = require('@groceristar/groceristar-fetch')
 
 
+console.log(groceristar.files)
+console.log(chickenKyiv.files)
+
 // const chickenKyiv = require('@groceristar/recipes-methods')
 // const groceristar = require('@groceristar/fetch-grocery-list')
 //
