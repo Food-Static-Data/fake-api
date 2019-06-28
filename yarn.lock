@@ -165,14 +165,16 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/groceristar-fetch@^2.1.10":
-  version "2.1.10"
-  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.1.10.tgz#3c76c156392bad04554b79f86529d4ebd8482c12"
+"@groceristar/groceristar-fetch@^2.0.13":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@groceristar/groceristar-fetch/-/groceristar-fetch-2.2.0.tgz#878b758e41f11cb56eac38c66f2cce80cbc88b21"
+  integrity sha512-bXONGexZ5eZaPHPNAxILYZJwDke0FUDlAgywW0hl05Wd+hCc2gkFYhCE/eRq9Z5+d+f28/sIVSrgH+l7SVye2w==
   dependencies:
-    "@groceristar/sd-wrapper" "^3.0.0"
+    "@groceristar/sd-wrapper" "^4.9.2"
     dayjs "^1.8.12"
     fs "0.0.2"
     lodash "^4.17.10"
+    raven-js "^3.27.1"
     underscore "^1.9.1"
     uuid "^3.3.2"
 
@@ -198,15 +200,6 @@
     path "^0.12.7"
     uuid "^3.3.2"
     yarn "^1.16.0"
-
-"@groceristar/sd-wrapper@^3.0.0":
-  version "3.0.3"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-3.0.3.tgz#3339cb18658abef939f97bef71a93bb35f578845"
-  dependencies:
-    dayjs "^1.8.13"
-    lodash "^4.17.11"
-    path "^0.12.7"
-    uuid "^3.3.2"
 
 "@groceristar/sd-wrapper@^4.9.2":
   version "4.11.1"
@@ -1099,7 +1092,7 @@ data-urls@^1.0.0:
     whatwg-mimetype "^2.2.0"
     whatwg-url "^7.0.0"
 
-dayjs@^1.8.12, dayjs@^1.8.13:
+dayjs@^1.8.12:
   version "1.8.13"
   resolved "https://registry.yarnpkg.com/dayjs/-/dayjs-1.8.13.tgz#51b5cdad23ba508bcea939a853b492fefb7fdc47"
 
