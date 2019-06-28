@@ -1,3 +1,7 @@
+
+// we can delete it for sure,
+// but I think we should keep it, maybe it'll help us with generator website
+
 const { getFileData } = require('../selectors/readFile');
 const { writeFile, writeFiles  }   = require('../selectors/writeFile');
 
