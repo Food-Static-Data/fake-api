@@ -5,7 +5,10 @@ const request = require('supertest')
 const app = require('./server')
 
 // const app = require('../../src/app')
-const { groceristar, showcase } = require('@groceristar/groceristar-fetch')
+const {
+  groceristar,
+  showcase
+} = require('@groceristar/groceristar-fetch')
 
 describe('Test the root path', () => {
   test('It should response the GET method getStatus()', (done) => {
@@ -24,6 +27,7 @@ describe('Test the root path', () => {
     })
   })
 
+/* @TODO START. REPLACE LATER WITH CONSTANTS FOR urls */
   test('It should response the GET method getDepartmentsClean()', (done) => {
     request(app).get('/gs/get-departments-clean').then((response) => {
       console.log(response.statusCode)
@@ -82,6 +86,8 @@ describe('Test the root path', () => {
     })
   }, 10000)
 })
+/* END. REPLACE LATER WITH CONSTANTS FOR urls */
+
 
 describe('Test /hello', () => {
   it('Should return Hello!', async () => {

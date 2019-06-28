@@ -1,120 +1,111 @@
-// const {
-  // groceristar
-//   chickenKyiv,
-//   showcase,
-//   gsLoopback
-// } = require('@groceristar/sd-wrapper')
+// this is an old and should work copy that use 2.0.14 version of fetch
+
+const {
+  groceristar,
+  chickenKyiv,
+  showcase,
+  gsLoopback
+} = require('@groceristar/groceristar-fetch')
 
 
-const chickenKyiv = require('@groceristar/recipes-methods')
-const groceristar = require('@groceristar/fetch-grocery-list')
+// const chickenKyiv = require('@groceristar/recipes-methods')
+// const groceristar = require('@groceristar/fetch-grocery-list')
+//
+// // const showcase = require('@groceristar/gl-showcase')
+// // const gsLoopback = require('@groceristar/gs-loopback')
 
-const showcase = require('@groceristar/f-showcase')
-const gsLoopback = require('@groceristar/f-loopback')
+function getSDepartments (id) {
+  return groceristar.getDepartments()
+}
 
+function getSGroceryById (id) {
+  return groceristar.getGroceryById(id)
+}
 
-function getSKeyArrayDepAndIng () {
-  return groceristar.getKeyArrayDepAndIng()
+function getSFullGrocery (name) {
+  return groceristar.getGroceryByNameWithDepAndIng(name)
+}
+
+function getSAllGrocery () {
+  return groceristar.getAllGrocery()
+}
+
+function getSGroceriesWithDepIngKey () {
+  return groceristar.getGroceriesWithDepIngKey()
+}
+
+function getSGroceryDataFromId (id) {
+  let grocery = getSGroceryById(id)[0]
+  let groceryName = grocery.name
+  let groceryWithDepAndIng = getSFullGrocery(groceryName)
+  return {
+    'name': groceryName,
+    'items': groceryWithDepAndIng
+  }
+}
+
+function getSAllIngredientsByOneDepartmentKey(department, groceryId){
+  return groceristar.getAllIngredientsByOneDepartmentKey(department, groceryId)
+}
+
+// -----showcase------
+function getSGroceryCollection () {
+  return showcase.getGroceryShowcase()
+}
+
+// --------chickenKyiv-------
+function getRandomRecipe () {
+  return chickenKyiv.getRandomRecipe()
+}
+
+function getSFirstFiveRecipes () {
+  return chickenKyiv.getFirstFiveRecipes()
+}
+
+function getShowcaseFiveRecipes () {
+  return chickenKyiv.getShowcaseFiveRecipes()
+}
+
+function getFiveRandomIngredients () {
+  return chickenKyiv.getFiveRandomIngredients()
+}
+
+// @TODO i don't like this name too
+function getRecipeChickenKyivById (id) {
+  return chickenKyiv.getRecipe()[id]
+}
+
+// GS Loopback
+function getUltimateGrocery () {
+  return gsLoopback.getUltimateGrocery()
 };
 
-function getSUltimateGroceryList () {
-  return gsLoopback.ultimateGroceryList()
+function getGLwithUserRelations () {
+  return gsLoopback.getGLwithUserRelations()
 };
 
-// function getSDepartments (id) {
-//   return groceristar.getDepartments()
-// }
-
-// function getSGroceryById (id) {
-//   return groceristar.getGroceryById(id)
-// }
-
-// function getSFullGrocery (name) {
-//   return groceristar.getGroceryByNameWithDepAndIng(name)
-// }
-
-// function getSAllGrocery () {
-//   return groceristar.getAllGrocery()
-// }
-
-// function getSGroceriesWithDepIngKey () {
-//   return groceristar.getGroceriesWithDepIngKey()
-// }
-
-// function getSGroceryDataFromId (id) {
-//   let grocery = getSGroceryById(id)[0]
-//   let groceryName = grocery.name
-//   let groceryWithDepAndIng = getSFullGrocery(groceryName)
-//   return {
-//     'name': groceryName,
-//     'items': groceryWithDepAndIng
-//   }
-// }
-
-// function getSAllIngredientsByOneDepartmentKey(department, groceryId){
-//   return groceristar.getAllIngredientsByOneDepartmentKey(department, groceryId)
-// }
-
-// // -----showcase------
-// function getSGroceryCollection () {
-//   return showcase.getGroceryShowcase()
-// }
-
-// // --------chickenKyiv-------
-// function getRandomRecipe () {
-//   return chickenKyiv.getRandomRecipe()
-// }
-
-// function getSFirstFiveRecipes () {
-//   return chickenKyiv.getFirstFiveRecipes()
-// }
-
-// function getShowcaseFiveRecipes () {
-//   return chickenKyiv.getShowcaseFiveRecipes()
-// }
-
-// function getFiveRandomIngredients () {
-//   return chickenKyiv.getFiveRandomIngredients()
-// }
-
-// // @TODO i don't like this name too
-// function getRecipeChickenKyivById (id) {
-//   return chickenKyiv.getRecipe()[id]
-// }
-
-// // GS Loopback
-// function getUltimateGrocery () {
-//   return gsLoopback.getUltimateGrocery()
-// };
-
-// function getGLwithUserRelations () {
-//   return gsLoopback.getGLwithUserRelations()
-// };
-
-// function getIngredientsSampleFromDB () {
-//   return gsLoopback.getIngredientsSampleFromDB()
-// };
+function getIngredientsSampleFromDB () {
+  return gsLoopback.getIngredientsSampleFromDB()
+};
 
 module.exports = {
-    getSKeyArrayDepAndIng,
-  getSUltimateGroceryList
-//   getSGroceryById,
-//   getSFullGrocery,
-//   getSGroceryDataFromId,
-//   getSGroceryCollection,
-//   getSAllGrocery,
-//   getSDepartments,
-//   getSAllIngredientsByOneDepartmentKey,
+  getSGroceryById,
+  getSFullGrocery,
+  getSGroceryDataFromId,
+  getSGroceryCollection,
+  getSAllGrocery,
+  getSDepartments,
+  getSAllIngredientsByOneDepartmentKey,
 
-//   getRandomRecipe,
-//   getSFirstFiveRecipes,
-//   getFiveRandomIngredients,
-//   getRecipeChickenKyivById,
-//   getShowcaseFiveRecipes,
+  getRandomRecipe,
+  getSFirstFiveRecipes,
+  getFiveRandomIngredients,
+  getRecipeChickenKyivById,
+  getShowcaseFiveRecipes,
 
-//   getUltimateGrocery,
-//   getGLwithUserRelations,
-//   getIngredientsSampleFromDB,
+  getUltimateGrocery,
+  getGLwithUserRelations,
+  getIngredientsSampleFromDB,
 
-//   getSGroceriesWithDepIngKey
+  getSGroceriesWithDepIngKey
 }
