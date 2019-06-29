@@ -48,7 +48,8 @@ function getSGroceryDataFromId (id) {
 }
 
 function getSAllIngredientsByOneDepartmentKey(department, groceryId){
-  return groceristar.getAllIngredientsByOneDepartmentKey(department, groceryId)
+  // return groceristar.getAllIngredientsByOneDepartmentKey(department, groceryId)
+  return ''
 }
 
 // -----showcase------
@@ -70,7 +71,8 @@ function getShowcaseFiveRecipes () {
 }
 
 function getFiveRandomIngredients () {
-  return chickenKyiv.getFiveRandomIngredients()
+  // return chickenKyiv.getFiveRandomIngredients()
+  return ''
 }
 
 // @TODO i don't like this name too
