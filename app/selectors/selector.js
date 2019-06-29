@@ -3,10 +3,10 @@
 const {
   groceristar,
   chickenKyiv,
-  showcase,
-  gsLoopback
-} = require('@groceristar/groceristar-fetch')
-
+  // showcase,
+  // gsLoopback
+} = require('@groceristar/mini-fetch')
+// } = require('@groceristar/groceristar-fetch')
 
 console.log(groceristar.files)
 console.log(chickenKyiv.files)
@@ -52,9 +52,9 @@ function getSAllIngredientsByOneDepartmentKey(department, groceryId){
 }
 
 // -----showcase------
-function getSGroceryCollection () {
-  return showcase.getGroceryShowcase()
-}
+// function getSGroceryCollection () {
+//   return showcase.getGroceryShowcase()
+// }
 
 // --------chickenKyiv-------
 function getRandomRecipe () {
@@ -79,17 +79,17 @@ function getRecipeChickenKyivById (id) {
 }
 
 // GS Loopback
-function getUltimateGrocery () {
-  return gsLoopback.getUltimateGrocery()
-};
-
-function getGLwithUserRelations () {
-  return gsLoopback.getGLwithUserRelations()
-};
-
-function getIngredientsSampleFromDB () {
-  return gsLoopback.getIngredientsSampleFromDB()
-};
+// function getUltimateGrocery () {
+//   return gsLoopback.getUltimateGrocery()
+// };
+//
+// function getGLwithUserRelations () {
+//   return gsLoopback.getGLwithUserRelations()
+// };
+//
+// function getIngredientsSampleFromDB () {
+//   return gsLoopback.getIngredientsSampleFromDB()
+// };
 
 module.exports = {
   getSGroceryById,
@@ -106,9 +106,9 @@ module.exports = {
   getRecipeChickenKyivById,
   getShowcaseFiveRecipes,
 
-  getUltimateGrocery,
-  getGLwithUserRelations,
-  getIngredientsSampleFromDB,
+  // getUltimateGrocery,
+  // getGLwithUserRelations,
+  // getIngredientsSampleFromDB,
 
   getSGroceriesWithDepIngKey
 }

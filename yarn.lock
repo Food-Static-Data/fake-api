@@ -178,6 +178,19 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
+"@groceristar/mini-fetch@^0.1.2":
+  version "0.1.2"
+  resolved "https://registry.yarnpkg.com/@groceristar/mini-fetch/-/mini-fetch-0.1.2.tgz#6b459e50d3518f2cfe7b283b25a63558c65af128"
+  integrity sha512-G+wDh5IVsk0e84st8SYwGd54aPQGnOHGA4HGHUB3sLSalN0Xz/Kpc6aQaSRyjzC+CQ9cWpnabFMGc8Wbqkn4qQ==
+  dependencies:
+    "@groceristar/sd-wrapper" "^4.11.3"
+    dayjs "^1.8.12"
+    fs "0.0.2"
+    lodash "^4.17.10"
+    raven-js "^3.27.1"
+    underscore "^1.9.1"
+    uuid "^3.3.2"
+
 "@groceristar/recipes-methods@^0.1.4":
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/@groceristar/recipes-methods/-/recipes-methods-0.1.4.tgz#bc3fc5613952fdf61c74f7a96c25dd856f74619c"
