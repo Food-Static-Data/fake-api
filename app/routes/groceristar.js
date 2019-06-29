@@ -34,7 +34,7 @@ const getRoutes = function (app, db) {
 
 const getAllGrocery = function (app, db) {
   app.get('/gs/get-all-grocery', (req, res) => {
-    console.log('grocery All')
+    // console.log('grocery All')
     const result = getSAllGrocery()
     res.send(result)
   })
@@ -111,7 +111,7 @@ module.exports = {
   getGroceryDataFromId,
   getGroceriesWithDepIngKey,
   getAllIngredientsByOneDepartmentKey,
-  
+
   getRoutes,
   getStatus
 }
