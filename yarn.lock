@@ -178,11 +178,12 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/mini-fetch@^0.1.6":
-  version "0.1.6"
-  resolved "https://registry.yarnpkg.com/@groceristar/mini-fetch/-/mini-fetch-0.1.6.tgz#678bea2b6ec735f3bac7baadaefdbb011fcd8651"
-  integrity sha512-c02r4/+z4bGYM6fHjhvio0Fwi3c0NN0AIX4DMIBJI9c/nslLVzAyXKiJZuFMbURU5LfoPLCMWrrTnybrHUdOsg==
+"@groceristar/mini-fetch@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@groceristar/mini-fetch/-/mini-fetch-0.1.8.tgz#6cd6bd1dc1afac2632f403971d86580b51ed47e2"
+  integrity sha512-c+0DeYUppK8/mkQ8dg5rToP2wyouR3w0efEAvLfKPiodQ1cy6mQcDmJgvYQsXgHysQgea1Li1JiuyDLKeRJjTQ==
   dependencies:
+    "@groceristar/mini-sd" "^0.1.5"
     "@groceristar/sd-wrapper" "^4.11.3"
     dayjs "^1.8.12"
     fs "0.0.2"
@@ -190,6 +191,18 @@
     raven-js "^3.27.1"
     underscore "^1.9.1"
     uuid "^3.3.2"
+
+"@groceristar/mini-sd@^0.1.5":
+  version "0.1.5"
+  resolved "https://registry.yarnpkg.com/@groceristar/mini-sd/-/mini-sd-0.1.5.tgz#8b8c474d18ef4a68881231b70f95c4d794170603"
+  integrity sha512-/ApQs2dMx0b1zolyh1CGKCQtBXmtx0RHiTPT+w4V8IJ6pojoS5i1Y1RvcqvYUcDy4nID/6S30ExDjBVfXkjSDA==
+  dependencies:
+    csv-parser "^2.3.0"
+    dayjs "^1.8.14"
+    lodash "^4.17.11"
+    path "^0.12.7"
+    uuid "^3.3.2"
+    yarn "^1.16.0"
 
 "@groceristar/recipes-methods@^0.1.4":
   version "0.1.4"
