@@ -178,10 +178,10 @@
     underscore "^1.9.1"
     uuid "^3.3.2"
 
-"@groceristar/mini-fetch@^0.1.8":
-  version "0.1.8"
-  resolved "https://registry.yarnpkg.com/@groceristar/mini-fetch/-/mini-fetch-0.1.8.tgz#6cd6bd1dc1afac2632f403971d86580b51ed47e2"
-  integrity sha512-c+0DeYUppK8/mkQ8dg5rToP2wyouR3w0efEAvLfKPiodQ1cy6mQcDmJgvYQsXgHysQgea1Li1JiuyDLKeRJjTQ==
+"@groceristar/mini-fetch@^0.1.9":
+  version "0.1.9"
+  resolved "https://registry.yarnpkg.com/@groceristar/mini-fetch/-/mini-fetch-0.1.9.tgz#37fd94428703ca7cc28b6047aba57a95a1c54618"
+  integrity sha512-KOUL1m2276+onYbzW0KMCUNn66puzTnrEZ0U8ssWV4hkEFBOxTWX9Yj7i5bSYREIu5NFJy11LrqcenYw2PBo8Q==
   dependencies:
     "@groceristar/mini-sd" "^0.1.5"
     "@groceristar/sd-wrapper" "^4.11.3"
