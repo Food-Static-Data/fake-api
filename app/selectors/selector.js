@@ -41,13 +41,17 @@ function getSGroceryDataFromId (id) {
   let grocery = getSGroceryById(id)[0]
   let groceryName = grocery.name
   let groceryWithDepAndIng = getSFullGrocery(groceryName)
+
   return {
     'name': groceryName,
     'items': groceryWithDepAndIng
   }
 }
 
-function getSAllIngredientsByOneDepartmentKey(department, groceryId){
+function getSAllIngredientsByOneDepartmentKey(
+  department,
+  groceryId
+){
   // return groceristar.getAllIngredientsByOneDepartmentKey(department, groceryId)
   return ''
 }
