@@ -2,7 +2,7 @@
 
 const {
   groceristar,
-  chickenKyiv,
+  // chickenKyiv,
   // showcase,
   // gsLoopback
 } = require('@groceristar/mini-fetch')
@@ -61,28 +61,35 @@ function getSAllIngredientsByOneDepartmentKey(
 //   return showcase.getGroceryShowcase()
 // }
 
+
+
+
+
+
+
+
 // --------chickenKyiv-------
-function getRandomRecipe () {
-  return chickenKyiv.getRandomRecipe()
-}
-
-function getSFirstFiveRecipes () {
-  return chickenKyiv.getFirstFiveRecipes()
-}
-
-function getShowcaseFiveRecipes () {
-  return chickenKyiv.getShowcaseFiveRecipes()
-}
-
-function getFiveRandomIngredients () {
-  // return chickenKyiv.getFiveRandomIngredients()
-  return ''
-}
-
-// @TODO i don't like this name too
-function getRecipeChickenKyivById (id) {
-  return chickenKyiv.getRecipe()[id]
-}
+// function getRandomRecipe () {
+//   return chickenKyiv.getRandomRecipe()
+// }
+//
+// function getSFirstFiveRecipes () {
+//   return chickenKyiv.getFirstFiveRecipes()
+// }
+//
+// function getShowcaseFiveRecipes () {
+//   return chickenKyiv.getShowcaseFiveRecipes()
+// }
+//
+// function getFiveRandomIngredients () {
+//   // return chickenKyiv.getFiveRandomIngredients()
+//   return ''
+// }
+//
+// // @TODO i don't like this name too
+// function getRecipeChickenKyivById (id) {
+//   return chickenKyiv.getRecipe()[id]
+// }
 
 // GS Loopback
 // function getUltimateGrocery () {
@@ -101,16 +108,16 @@ module.exports = {
   getSGroceryById,
   getSFullGrocery,
   getSGroceryDataFromId,
-  getSGroceryCollection,
+  // getSGroceryCollection,
   getSAllGrocery,
   getSDepartments,
   getSAllIngredientsByOneDepartmentKey,
 
-  getRandomRecipe,
-  getSFirstFiveRecipes,
-  getFiveRandomIngredients,
-  getRecipeChickenKyivById,
-  getShowcaseFiveRecipes,
+  // getRandomRecipe,
+  // getSFirstFiveRecipes,
+  // getFiveRandomIngredients,
+  // getRecipeChickenKyivById,
+  // getShowcaseFiveRecipes,
 
   // getUltimateGrocery,
   // getGLwithUserRelations,
