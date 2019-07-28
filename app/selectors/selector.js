@@ -8,6 +8,7 @@ const {
 } = require('@groceristar/mini-fetch')
 // } = require('@groceristar/groceristar-fetch')
 
+const { showcase } = require('@groceristar/groceristar-fetch')
 // console.log(groceristar.files)
 // console.log(chickenKyiv.files)
 
@@ -57,9 +58,12 @@ function getSAllIngredientsByOneDepartmentKey(
 }
 
 // -----showcase------
-// function getSGroceryCollection () {
-//   return showcase.getGroceryShowcase()
-// }
+function getSGroceryCollection () {
+  console.log("Here");
+  console.log(groceristar);
+  
+  // return showcase.getGroceryShowcase()
+}
 
 
 
@@ -108,7 +112,7 @@ module.exports = {
   getSGroceryById,
   getSFullGrocery,
   getSGroceryDataFromId,
-  // getSGroceryCollection,
+  getSGroceryCollection,
   getSAllGrocery,
   getSDepartments,
   getSAllIngredientsByOneDepartmentKey,
