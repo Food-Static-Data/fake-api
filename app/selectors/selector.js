@@ -59,11 +59,11 @@ function getSAllIngredientsByOneDepartmentKey(
 
 // -----showcase------
 function getSGroceryCollection () {
-  console.log("Here");
-  console.log(groceristar);
-  
-  // return showcase.getGroceryShowcase()
+ 
+  return showcase.getGroceryShowcase()
 }
+
+
 
 
 
