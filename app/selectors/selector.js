@@ -1,14 +1,14 @@
 // this is an old and should work copy that use 2.0.14 version of fetch
 
 const {
-  groceristar,
+  // groceristar,
   // chickenKyiv,
   // showcase,
   // gsLoopback
 } = require('@groceristar/mini-fetch')
 // } = require('@groceristar/groceristar-fetch')
 
-const { showcase } = require('@groceristar/groceristar-fetch')
+const { showcase, groceristar} = require('@groceristar/groceristar-fetch')
 // console.log(groceristar.files)
 // console.log(chickenKyiv.files)
 
