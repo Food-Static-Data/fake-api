@@ -17,7 +17,7 @@
     "@groceristar/f-loopback": "^0.0.2",
     "@groceristar/f-showcase": "^0.0.2",
     "@groceristar/fetch-grocery-list": "^0.1.4",
-    "@groceristar/groceristar-fetch": "^2.2.6",
+    "@groceristar/groceristar-fetch": "^2.2.7",
     "@groceristar/mini-fetch": "^0.1.16",
     "@groceristar/recipes-methods": "^0.1.4",
     "body-parser": "^1.19.0",
