@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "json-server --watch db.json",
+    "dev": "nodemon json-server --watch db.json",
+    "server2": "node server.js"
   },
   "keywords": [],
   "author": "",
