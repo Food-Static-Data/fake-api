@@ -29,12 +29,12 @@
     "mongodb": "^3.2.5",
     "nodemon": "^1.19.0",
     "path": "^0.12.7",
-    "supertest": "^4.0.2",
-    "snyk": "^1.248.0"
+    "snyk": "^1.248.0",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
-    "@groceristar/sd-wrapper": "4.14.4",
-    "standard": "14.3.1"
+    "@groceristar/sd-wrapper": "^4.15.0",
+    "standard": "^14.3.1"
   },
   "snyk": true
 }
