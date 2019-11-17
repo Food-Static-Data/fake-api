@@ -222,10 +222,10 @@
     raven-js "^3.27.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@4.15.0":
-  version "4.15.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.15.0.tgz#c94c18704132e097fe04797e6dd5529d9756fd4e"
-  integrity sha512-uXa/C2o2Uk3Ogm0k/Hfc1QCn9ET/BG6A+urMXpjQw0CcMabGsJlN5NTV02eP1ss4cDJvhXc3rD+3JW9dolockA==
+"@groceristar/sd-wrapper@4.15.1":
+  version "4.15.1"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.15.1.tgz#fe970d56f1dc301f231f1ac85fc80aa56196c860"
+  integrity sha512-kG9CxXP0XR4dYNG8zi35tvegsSRQgq1Yu+WZlJ3BjfqzEN2nAo/kJUhBLYS29RwfbgQcD2rEzaXxvcHwbxEU8Q==
   dependencies:
     "@groceristar/static-data-generator" "^1.0.0"
     babel-eslint "^10.0.2"
