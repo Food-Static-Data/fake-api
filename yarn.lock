@@ -222,6 +222,24 @@
     raven-js "^3.27.1"
     uuid "^3.3.2"
 
+"@groceristar/sd-wrapper@4.15.0":
+  version "4.15.0"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.15.0.tgz#c94c18704132e097fe04797e6dd5529d9756fd4e"
+  integrity sha512-uXa/C2o2Uk3Ogm0k/Hfc1QCn9ET/BG6A+urMXpjQw0CcMabGsJlN5NTV02eP1ss4cDJvhXc3rD+3JW9dolockA==
+  dependencies:
+    "@groceristar/static-data-generator" "^1.0.0"
+    babel-eslint "^10.0.2"
+    csv-parser "^2.3.0"
+    dayjs "^1.8.14"
+    lodash "^4.17.11"
+    path "^0.12.7"
+    path-exists "^4.0.0"
+    prettier "^1.18.2"
+    pretty-quick "^2.0.0"
+    snyk "^1.231.0"
+    uuid "^3.3.2"
+    yarn "^1.16.0"
+
 "@groceristar/sd-wrapper@^4.11.3":
   version "4.11.3"
   resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.11.3.tgz#fafa3c713d4d84e945408745974b7a515a9011a2"
@@ -247,24 +265,6 @@
     path "^0.12.7"
     path-exists "^4.0.0"
     snyk "^1.192.4"
-    uuid "^3.3.2"
-    yarn "^1.16.0"
-
-"@groceristar/sd-wrapper@^4.15.0":
-  version "4.15.0"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.15.0.tgz#c94c18704132e097fe04797e6dd5529d9756fd4e"
-  integrity sha512-uXa/C2o2Uk3Ogm0k/Hfc1QCn9ET/BG6A+urMXpjQw0CcMabGsJlN5NTV02eP1ss4cDJvhXc3rD+3JW9dolockA==
-  dependencies:
-    "@groceristar/static-data-generator" "^1.0.0"
-    babel-eslint "^10.0.2"
-    csv-parser "^2.3.0"
-    dayjs "^1.8.14"
-    lodash "^4.17.11"
-    path "^0.12.7"
-    path-exists "^4.0.0"
-    prettier "^1.18.2"
-    pretty-quick "^2.0.0"
-    snyk "^1.231.0"
     uuid "^3.3.2"
     yarn "^1.16.0"
 
@@ -6135,7 +6135,7 @@ standard-engine@^12.0.0:
     minimist "^1.1.0"
     pkg-conf "^3.1.0"
 
-standard@^14.3.1:
+standard@14.3.1:
   version "14.3.1"
   resolved "https://registry.yarnpkg.com/standard/-/standard-14.3.1.tgz#f6a5d9244fbb6b76d0c2dbcc1048a03c863038b6"
   integrity sha512-TUQwU7znlZLfgKH1Zwn/D84FitWZkUTfbxSiz/vFx+4c9GV+clSfG/qLiLZOlcdyzhw3oF5/pZydNjbNDfHPEw==
