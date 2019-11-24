@@ -222,10 +222,10 @@
     raven-js "^3.27.1"
     uuid "^3.3.2"
 
-"@groceristar/sd-wrapper@4.15.1":
-  version "4.15.1"
-  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.15.1.tgz#fe970d56f1dc301f231f1ac85fc80aa56196c860"
-  integrity sha512-kG9CxXP0XR4dYNG8zi35tvegsSRQgq1Yu+WZlJ3BjfqzEN2nAo/kJUhBLYS29RwfbgQcD2rEzaXxvcHwbxEU8Q==
+"@groceristar/sd-wrapper@4.15.2":
+  version "4.15.2"
+  resolved "https://registry.yarnpkg.com/@groceristar/sd-wrapper/-/sd-wrapper-4.15.2.tgz#2e4169cb5235bac2eeb8ba89ecd68af569fb9731"
+  integrity sha512-ihdn5UIlXfHiuEIsNm7hF9LsmQviqV2XMcVFzTEUH/a+P3eAbSTUGbwQo1STbFUkO5PZQtlZrQgGSfjUpjG9oA==
   dependencies:
     "@groceristar/static-data-generator" "^1.0.0"
     babel-eslint "^10.0.2"
@@ -236,6 +236,7 @@
     path-exists "^4.0.0"
     prettier "^1.18.2"
     pretty-quick "^2.0.0"
+    rollup-plugin-includepaths "^0.2.3"
     snyk "^1.231.0"
     uuid "^3.3.2"
     yarn "^1.16.0"
@@ -5229,6 +5230,11 @@ rimraf@^2.6.1:
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.2.tgz#2ed8150d24a16ea8651e6d6ef0f47c4158ce7a36"
   dependencies:
     glob "^7.0.5"
+
+rollup-plugin-includepaths@^0.2.3:
+  version "0.2.3"
+  resolved "https://registry.yarnpkg.com/rollup-plugin-includepaths/-/rollup-plugin-includepaths-0.2.3.tgz#244d21b9669a0debe476d825e4a02ed08c06b258"
+  integrity sha512-4QbSIZPDT+FL4SViEVCRi4cGCA64zQJu7u5qmCkO3ecHy+l9EQBsue15KfCpddfb6Br0q47V/v2+E2YUiqts9g==
 
 rsvp@^3.3.3:
   version "3.6.2"
