@@ -30,7 +30,7 @@
     "nodemon": "^2.0.0",
     "path": "^0.12.7",
     "snyk": "^1.248.0",
-    "supertest": "^4.0.2"
+    "supertest": "^6.0.0"
   },
   "devDependencies": {
     "@groceristar/sd-wrapper": "4.15.2",
