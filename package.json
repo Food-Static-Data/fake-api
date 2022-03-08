@@ -29,7 +29,7 @@
     "mongodb": "^4.0.0",
     "nodemon": "^2.0.0",
     "path": "^0.12.7",
-    "snyk": "^1.248.0",
+    "snyk": "^1.258.2",
     "supertest": "^4.0.2"
   },
   "devDependencies": {
